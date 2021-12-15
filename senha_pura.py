@@ -2,13 +2,23 @@ from conect_db import *
 
 
 
-def create_senha_pura(__self__, nome, senha):
+def create_senha_pura(login, senha):
     iniciar_conexao()
-    create_register(nome, senha, "")
+    create_register(login, senha, "")
 
 
-def read_senha_pura(__self, nome, senha):
+def read_senha_pura(login, senha):
     iniciar_conexao()
-    read_register(nome, senha, "")
+    registro = read_register(login, senha, "")
+#    print(registro)
+    return registro
 
 
+# create_senha_pura("maria", "mariabonita")    
+    
+# read_senha_pura("maria", "mariabonita")
+
+# create_senha_pura("joao", "123asd")
+
+
+# read_senha_pura("joao", "123asd")
